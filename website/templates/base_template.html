@@ -8,16 +8,19 @@
   </head>
   <body style="background-color: #dddddd">
 
+    
 
     <nav class="navbar navbar-expand-lg bg-light mb-3">
+      
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <a class="navbar-brand" href="/">
             <img src="{{ url_for('static', filename='img/techicon.png') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             <!-- add name next to logo here -->
           </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link" id="home" href="/">Home</a>
@@ -29,11 +32,12 @@
           </div>
         </div>
 
-
-
     </nav>
 
-
+    <div class="container">
+    {% block content %}
+    {% endblock %}
+    </div>
 
 
 
